@@ -2,7 +2,8 @@ const { Sequelize } = require('sequelize')
 
 // Database
 const sequelize = new Sequelize(
-  'postgres://db_rendernodejs_user:pt7XuAZpeWNa1YppL0nhXqyzsXlYWwkq@dpg-clesg553qkas73b05ssg-a.frankfurt-postgres.render.com/db_rendernodejs',
+  process.env.DATABASE_URL,
+  //'postgres://db_rendernodejs_user:pt7XuAZpeWNa1YppL0nhXqyzsXlYWwkq@dpg-clesg553qkas73b05ssg-a/db_rendernodejs',
     {
     dialect: 'postgres',
     dialectOptions: {
